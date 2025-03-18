@@ -126,3 +126,41 @@ T:\99 - Elektronikentwicklung\18-Software\VB.NET Software\EPREL_Dataconverter\EP
 T:\99 - Elektronikentwicklung\18-Software\VB.NET Software\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.application
 T:\99 - Elektronikentwicklung\18-Software\VB.NET Software\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.vbproj.CopyComplete
 T:\99 - Elektronikentwicklung\18-Software\VB.NET Software\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.vbproj.SuggestedBindingRedirects.cache
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\modelRegistrationService_v2.5.xsd
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\EPREL Dataconverter.exe.config
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\EPREL Dataconverter.exe.manifest
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\EPREL Dataconverter.application
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\EPREL Dataconverter.exe
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\EPREL Dataconverter.pdb
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\EPREL Dataconverter.xml
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\de\EPREL Dataconverter.resources.dll
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.pdb
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.vbproj.AssemblyReference.cache
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.vbproj.ResolveComReference.cache
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.DownloadProcess.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Form1.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Form2.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Form3.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Disclaimer.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Parsing.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Resources.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.XML_Process.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL_Dataconverter.Form1.de.resources
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.vbproj.GenerateResource.cache
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.vbproj.CoreCompileInputs.cache
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\de\EPREL Dataconverter.resources.dll
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.TrustInfo.xml
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.exe.manifest
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.application
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Da.E51F3E63.Up2Date
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.exe
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.xml
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Debug\EPREL Dataconverter.pdb

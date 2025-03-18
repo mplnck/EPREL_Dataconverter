@@ -12,7 +12,7 @@ Public Class Form1
     Public items() As String
     Public _EPREL_MODEL_REGISTRATION_NUMBER() As String
     Public _MODEL_IDENTIFIER() As String
-    Public _CONSIDER_GENERATED_LABEL_AS_PROVIDED() As String
+    Public _USE_SUPPLIER_UPLOADED_LABEL() As String
     Public _ON_MARKET_START_DATE() As String
     Public _ON_MARKET_END_DATE() As String
     Public _VISIBLE_TO_UK_MSA() As String
@@ -65,11 +65,31 @@ Public Class Form1
     Public _LED_MLS_FL_REPLACEMENT_CLAIM() As String
     Public _LED_MLS_FLICKER_METRIC() As String
     Public _LED_MLS_STROBOSCOPIC_EFFECT_METRIC() As String
+    Public _TECH_LUMINOUS_FLUX() As String
+    Public _TECH_COLOUR_RENDERING_INDEX() As String
+    Public _TECH_POWER_ON_MODE() As String
+    Public _TECH_BEAM_ANGLE() As String
+    Public _TECH_PEAK_LUMINOUS_INTENSITY() As String
+    Public _TECH_CORRELATED_COLOUR_TEMP() As String
+    Public _TECH_POWER_STANDBY() As String
+    Public _TECH_POWER_STANDBY_NETWORKED() As String
+    Public _TECH_R9_COLOUR_RENDERING_INDEX() As String
+    Public _TECH_SURVIVAL_FACTOR() As String
+    Public _TECH_LUMEN_MAINTENANCE_FACTOR() As String
+    Public _TECH_INDICATIVE_LIFETIME() As String
+    Public _TECH_DISPLACEMENT_FACTOR() As String
+    Public _TECH_COLOUR_CONSISTENCY() As String
+    Public _TECH_FLICKER_METRIC() As String
+    Public _TECH_STROBOSCOPIC_EFFECT_METRIC() As String
+    Public _TECH_LUMINANCE_HLLS() As String
+    Public _TECH_EXCITATION_PURITY_CTLS_BLUE() As String
+    Public _TECH_EXCITATION_PURITY_CTLS_GREEN() As String
+    Public _TECH_EXCITATION_PURITY_CTLS_RED() As String
     Public row As Integer
     Public col As String
     Public sheet As String
 
-    'Erzeugen der Struktu für die technische Dokumentation
+    'Erzeugen der Struktur für die technische Dokumentation
     Structure _TECHNICAL_DOCUMENTATION
         Public _TD_MODEL_IDENTIFIER As String
         Public _TD_DESCRIPTION As String
@@ -188,7 +208,7 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        System.Diagnostics.Process.Start("mailto:m.planeck@nimbus-group.com")
+        System.Diagnostics.Process.Start("mailto:marioplaneck@yahoo.de")
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -273,7 +293,7 @@ Public Class Form1
             dummy = xltab1.Range("A" & xltab1.Rows.Count).End(xlUP).Row
             lastentry = xltab1.Range("A1:A" & dummy).Value
             ReDim _MODEL_IDENTIFIER(dummy - 1)
-            ReDim _CONSIDER_GENERATED_LABEL_AS_PROVIDED(dummy - 1)
+            ReDim _USE_SUPPLIER_UPLOADED_LABEL(dummy - 1)
             ReDim _ON_MARKET_START_DATE(dummy - 1)
             ReDim _ON_MARKET_END_DATE(dummy - 1)
             ReDim _VISIBLE_TO_UK_MSA(dummy - 1)
@@ -326,6 +346,26 @@ Public Class Form1
             ReDim _LED_MLS_FL_REPLACEMENT_CLAIM(dummy - 1)
             ReDim _LED_MLS_FLICKER_METRIC(dummy - 1)
             ReDim _LED_MLS_STROBOSCOPIC_EFFECT_METRIC(dummy - 1)
+            ReDim _TECH_LUMINOUS_FLUX(dummy - 1)
+            ReDim _TECH_COLOUR_RENDERING_INDEX(dummy - 1)
+            ReDim _TECH_POWER_ON_MODE(dummy - 1)
+            ReDim _TECH_BEAM_ANGLE(dummy - 1)
+            ReDim _TECH_PEAK_LUMINOUS_INTENSITY(dummy - 1)
+            ReDim _TECH_CORRELATED_COLOUR_TEMP(dummy - 1)
+            ReDim _TECH_POWER_STANDBY(dummy - 1)
+            ReDim _TECH_POWER_STANDBY_NETWORKED(dummy - 1)
+            ReDim _TECH_R9_COLOUR_RENDERING_INDEX(dummy - 1)
+            ReDim _TECH_SURVIVAL_FACTOR(dummy - 1)
+            ReDim _TECH_LUMEN_MAINTENANCE_FACTOR(dummy - 1)
+            ReDim _TECH_INDICATIVE_LIFETIME(dummy - 1)
+            ReDim _TECH_DISPLACEMENT_FACTOR(dummy - 1)
+            ReDim _TECH_COLOUR_CONSISTENCY(dummy - 1)
+            ReDim _TECH_FLICKER_METRIC(dummy - 1)
+            ReDim _TECH_STROBOSCOPIC_EFFECT_METRIC(dummy - 1)
+            ReDim _TECH_LUMINANCE_HLLS(dummy - 1)
+            ReDim _TECH_EXCITATION_PURITY_CTLS_BLUE(dummy - 1)
+            ReDim _TECH_EXCITATION_PURITY_CTLS_GREEN(dummy - 1)
+            ReDim _TECH_EXCITATION_PURITY_CTLS_RED(dummy - 1)
             Dim provider As CultureInfo = New CultureInfo("en-EN")
             Dim dmy1 As Date
             Dim dmy2 As Double
@@ -340,7 +380,7 @@ Public Class Form1
                 col = "A"
                 _MODEL_IDENTIFIER(i - 1) = xltab1.Range(col & i + 1).Value
                 col = "B"
-                _CONSIDER_GENERATED_LABEL_AS_PROVIDED(i - 1) = xltab1.Range(col & i + 1).Value
+                _USE_SUPPLIER_UPLOADED_LABEL(i - 1) = xltab1.Range(col & i + 1).Value
                 col = "C"
                 dmy1 = xltab1.Range(col & i + 1).Value
                 '-Format date to yyyy-mm-dd+hh:mm
@@ -483,6 +523,87 @@ Public Class Form1
                 dmy2 = xltab1.Range("BB" & i + 1).Value
                 _LED_MLS_STROBOSCOPIC_EFFECT_METRIC(i - 1) = String.Format(provider, "{0:0.0}", dmy2)
 
+                'technische Dokumentation
+                col = "BH"
+                dmy2 = xltab1.Range("BH" & i + 1).Value
+                _TECH_LUMINOUS_FLUX(i - 1) = Math.Ceiling(Convert.ToDecimal(xltab1.Range("BH" & i + 1).Value))
+
+                col = "BI"
+                dmy2 = xltab1.Range("BI" & i + 1).Value
+                _TECH_COLOUR_RENDERING_INDEX(i - 1) = String.Format(provider, "{000}", dmy2)
+
+                col = "BJ"
+                dmy2 = xltab1.Range("BJ" & i + 1).Value
+                _TECH_POWER_ON_MODE(i - 1) = String.Format(provider, "{0:###0.0}", dmy2)
+
+                col = "BK"
+                dmy2 = xltab1.Range("BJ" & i + 1).Value
+                _TECH_BEAM_ANGLE(i - 1) = Math.Ceiling(Convert.ToDecimal(xltab1.Range("BK" & i + 1).Value))
+
+                col = "BL"
+                dmy2 = xltab1.Range("BL" & i + 1).Value
+                _TECH_PEAK_LUMINOUS_INTENSITY(i - 1) = String.Format(provider, "{0:######}", dmy2)
+
+                col = "BM"
+                dmy2 = xltab1.Range("BM" & i + 1).Value
+                _TECH_CORRELATED_COLOUR_TEMP(i - 1) = String.Format(provider, "{0:0000}", dmy2)
+
+                col = "BN"
+                dmy2 = xltab1.Range("BN" & i + 1).Value
+                _TECH_POWER_STANDBY(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "BO"
+                dmy2 = xltab1.Range("BO" & i + 1).Value
+                _TECH_POWER_STANDBY_NETWORKED(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "BP"
+                dmy2 = xltab1.Range("BP" & i + 1).Value
+                _TECH_R9_COLOUR_RENDERING_INDEX(i - 1) = Math.Round(Convert.ToDecimal(xltab1.Range("BP" & i + 1).Value))
+
+                col = "BQ"
+                dmy2 = xltab1.Range("BQ" & i + 1).Value
+                _TECH_SURVIVAL_FACTOR(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "BR"
+                dmy2 = xltab1.Range("BR" & i + 1).Value
+                _TECH_LUMEN_MAINTENANCE_FACTOR(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "BS"
+                dmy2 = xltab1.Range("BS" & i + 1).Value
+                _TECH_INDICATIVE_LIFETIME(i - 1) = String.Format(provider, "{0:#####}", dmy2)
+
+                col = "BT"
+                dmy2 = xltab1.Range("BT" & i + 1).Value
+                _TECH_DISPLACEMENT_FACTOR(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "BU"
+                dmy2 = xltab1.Range("BU" & i + 1).Value
+                _TECH_COLOUR_CONSISTENCY(i - 1) = String.Format(provider, "{0:#}", dmy2)
+
+                col = "BV"
+                dmy2 = xltab1.Range("BV" & i + 1).Value
+                _TECH_FLICKER_METRIC(i - 1) = String.Format(provider, "{0:0.0}", dmy2)
+
+                col = "BW"
+                dmy2 = xltab1.Range("BW" & i + 1).Value
+                _TECH_STROBOSCOPIC_EFFECT_METRIC(i - 1) = String.Format(provider, "{0:0.0}", dmy2)
+
+                col = "BX"
+                dmy2 = xltab1.Range("BX" & i + 1).Value
+                _TECH_LUMINANCE_HLLS(i - 1) = String.Format(provider, "{0:######}", dmy2)
+
+                col = "BY"
+                dmy2 = xltab1.Range("BY" & i + 1).Value
+                _TECH_EXCITATION_PURITY_CTLS_BLUE(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "BZ"
+                dmy2 = xltab1.Range("BZ" & i + 1).Value
+                _TECH_EXCITATION_PURITY_CTLS_GREEN(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
+                col = "CA"
+                dmy2 = xltab1.Range("CA" & i + 1).Value
+                _TECH_EXCITATION_PURITY_CTLS_RED(i - 1) = String.Format(provider, "{0:0.00}", dmy2)
+
             Next
 
             dummy2 = book.Worksheets("attachments").Range("A" & xltab2.Rows.Count).End(xlUP).Row
@@ -543,7 +664,7 @@ Public Class Form1
             lastentry = xltab1.Range("A1:A" & dummy).Value
             ReDim _EPREL_MODEL_REGISTRATION_NUMBER(dummy - 1)
             ReDim _MODEL_IDENTIFIER(dummy - 1)
-            ReDim _CONSIDER_GENERATED_LABEL_AS_PROVIDED(dummy - 1)
+            ReDim _USE_SUPPLIER_UPLOADED_LABEL(dummy - 1)
             ReDim _ON_MARKET_START_DATE(dummy - 1)
             ReDim _ON_MARKET_END_DATE(dummy - 1)
             ReDim _VISIBLE_TO_UK_MSA(dummy - 1)
@@ -596,6 +717,26 @@ Public Class Form1
             ReDim _LED_MLS_FL_REPLACEMENT_CLAIM(dummy - 1)
             ReDim _LED_MLS_FLICKER_METRIC(dummy - 1)
             ReDim _LED_MLS_STROBOSCOPIC_EFFECT_METRIC(dummy - 1)
+            ReDim _TECH_LUMINOUS_FLUX(dummy - 1)
+            ReDim _TECH_COLOUR_RENDERING_INDEX(dummy - 1)
+            ReDim _TECH_POWER_ON_MODE(dummy - 1)
+            ReDim _TECH_BEAM_ANGLE(dummy - 1)
+            ReDim _TECH_PEAK_LUMINOUS_INTENSITY(dummy - 1)
+            ReDim _TECH_CORRELATED_COLOUR_TEMP(dummy - 1)
+            ReDim _TECH_POWER_STANDBY(dummy - 1)
+            ReDim _TECH_POWER_STANDBY_NETWORKED(dummy - 1)
+            ReDim _TECH_R9_COLOUR_RENDERING_INDEX(dummy - 1)
+            ReDim _TECH_SURVIVAL_FACTOR(dummy - 1)
+            ReDim _TECH_LUMEN_MAINTENANCE_FACTOR(dummy - 1)
+            ReDim _TECH_INDICATIVE_LIFETIME(dummy - 1)
+            ReDim _TECH_DISPLACEMENT_FACTOR(dummy - 1)
+            ReDim _TECH_COLOUR_CONSISTENCY(dummy - 1)
+            ReDim _TECH_FLICKER_METRIC(dummy - 1)
+            ReDim _TECH_STROBOSCOPIC_EFFECT_METRIC(dummy - 1)
+            ReDim _TECH_LUMINANCE_HLLS(dummy - 1)
+            ReDim _TECH_EXCITATION_PURITY_CTLS_BLUE(dummy - 1)
+            ReDim _TECH_EXCITATION_PURITY_CTLS_GREEN(dummy - 1)
+            ReDim _TECH_EXCITATION_PURITY_CTLS_RED(dummy - 1)
             Dim provider As CultureInfo = New CultureInfo("en-EN")
             Dim dmy1 As Date
             Dim dmy2 As Double
@@ -607,7 +748,7 @@ Public Class Form1
                 Parsing.Label2.Text = i
                 _EPREL_MODEL_REGISTRATION_NUMBER(i - 1) = xltab1.Range("A" & i + 1).Value
                 _MODEL_IDENTIFIER(i - 1) = xltab1.Range("B" & i + 1).Value
-                _CONSIDER_GENERATED_LABEL_AS_PROVIDED(i - 1) = xltab1.Range("C" & i + 1).Value
+                _USE_SUPPLIER_UPLOADED_LABEL(i - 1) = xltab1.Range("C" & i + 1).Value
                 dmy1 = xltab1.Range("D" & i + 1).Value
                 '-Format date to yyyy-mm-dd+hh:mm
                 _ON_MARKET_START_DATE(i - 1) = dmy1.ToString("yyyy") & "-" & dmy1.ToString("MM") & "-" & dmy1.ToString("dd") & dmy1.ToString("zzz")
@@ -834,12 +975,12 @@ Public Class Form1
                 MODEL_VERSION.Add(PRODUCT_GROUP)
 
                 '---Energy Label 
-                If _CONSIDER_GENERATED_LABEL_AS_PROVIDED(i) <> "" Then
+                If _USE_SUPPLIER_UPLOADED_LABEL(i) <> "" Then
                     Dim ENERGY_LABEL As XElement = <ENERGY_LABEL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns5="http://eprel.ener.ec.europa.eu/commonTypes/EnergyLabelTypes/v2" xsi:type="ns5:GeneratedEnergyLabel"/>
-                    Dim CONSIDER_GENERATED_LABEL_AS_PROVIDED As XElement = <CONSIDER_GENERATED_LABEL_AS_PROVIDED/>
+                    Dim USE_SUPPLIER_UPLOADED_LABEL As XElement = <USE_SUPPLIER_UPLOADED_LABEL/>
 
-                    CONSIDER_GENERATED_LABEL_AS_PROVIDED.Value = _CONSIDER_GENERATED_LABEL_AS_PROVIDED(i)
-                    ENERGY_LABEL.Add(CONSIDER_GENERATED_LABEL_AS_PROVIDED)
+                    USE_SUPPLIER_UPLOADED_LABEL.Value = _USE_SUPPLIER_UPLOADED_LABEL(i)
+                    ENERGY_LABEL.Add(USE_SUPPLIER_UPLOADED_LABEL)
                     MODEL_VERSION.Add(ENERGY_LABEL)
                 Else
                     Form2.LB_Log.Items.Add("Energy Label for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
@@ -1467,6 +1608,250 @@ Public Class Form1
 
 
                 End If
+
+                '---Technical documentation section
+                Dim TECHNICAL_PARAMETERS As XElement = <TECHNICAL_PARAMETERS/>
+
+                If _TECH_LUMINOUS_FLUX(i) <> "" Then
+                    Dim TECH_LUMINOUS_FLUX As XElement = <TECH_LUMINOUS_FLUX/>
+                    TECH_LUMINOUS_FLUX.Value = _TECH_LUMINOUS_FLUX(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_LUMINOUS_FLUX)
+                Else
+                    Form2.LB_Log.Items.Add("Technical luminous flux for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _TECH_COLOUR_RENDERING_INDEX(i) <> "" Then
+                    Dim TECH_COLOUR_RENDERING_INDEX As XElement = <TECH_COLOUR_RENDERING_INDEX/>
+                    TECH_COLOUR_RENDERING_INDEX.Value = _TECH_COLOUR_RENDERING_INDEX(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_COLOUR_RENDERING_INDEX)
+                Else
+                    Form2.LB_Log.Items.Add("Technical colour rendering index for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _TECH_POWER_ON_MODE(i) <> "" Then
+                    Dim TECH_POWER_ON_MODE As XElement = <TECH_POWER_ON_MODE/>
+                    TECH_POWER_ON_MODE.Value = _TECH_POWER_ON_MODE(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_POWER_ON_MODE)
+                Else
+                    Form2.LB_Log.Items.Add("Technical power on mode for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _DIRECTIONAL(i) = "DLS" Then
+
+                    If _TECH_BEAM_ANGLE(i) <> "" Then
+                        Dim TECH_BEAM_ANGLE As XElement = <TECH_BEAM_ANGLE/>
+                        TECH_BEAM_ANGLE.Value = _TECH_BEAM_ANGLE(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_BEAM_ANGLE)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical beam angle for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_PEAK_LUMINOUS_INTENSITY(i) <> "" Then
+                        Dim TECH_PEAK_LUMINOUS_INTENSITY As XElement = <TECH_PEAK_LUMINOUS_INTENSITY/>
+                        TECH_PEAK_LUMINOUS_INTENSITY.Value = _TECH_PEAK_LUMINOUS_INTENSITY(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_PEAK_LUMINOUS_INTENSITY)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical peak luminous intensity for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+                If _TECH_CORRELATED_COLOUR_TEMP(i) <> "" Then
+                    Dim TECH_CORRELATED_COLOUR_TEMP As XElement = <TECH_CORRELATED_COLOUR_TEMP/>
+                    TECH_CORRELATED_COLOUR_TEMP.Value = _TECH_CORRELATED_COLOUR_TEMP(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_CORRELATED_COLOUR_TEMP)
+                Else
+                    Form2.LB_Log.Items.Add("Technical correlated colour temperature for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _TECH_POWER_STANDBY(i) <> "" Then
+                    Dim TECH_POWER_STANDBY As XElement = <TECH_POWER_STANDBY/>
+                    TECH_POWER_STANDBY.Value = _TECH_POWER_STANDBY(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_POWER_STANDBY)
+                Else
+                    Form2.LB_Log.Items.Add("Technical power standby for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _CONNECTED_LIGHT_SOURCE(i) = "CLS" Then
+                    If _TECH_POWER_STANDBY_NETWORKED(i) <> "" Then
+                        Dim TECH_POWER_STANDBY_NETWORKED As XElement = <TECH_POWER_STANDBY_NETWORKED/>
+                        TECH_POWER_STANDBY_NETWORKED.Value = _TECH_POWER_STANDBY_NETWORKED(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_POWER_STANDBY_NETWORKED)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical power standby networked for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+
+                If _LIGHTING_TECHNOLOGY(i) = "LED" Or _LIGHTING_TECHNOLOGY(i) = "OLED" Then
+                    If _TECH_R9_COLOUR_RENDERING_INDEX(i) <> "" Then
+                        Dim TECH_R9_COLOUR_RENDERING_INDEX As XElement = <TECH_R9_COLOUR_RENDERING_INDEX/>
+                        TECH_R9_COLOUR_RENDERING_INDEX.Value = _TECH_R9_COLOUR_RENDERING_INDEX(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_R9_COLOUR_RENDERING_INDEX)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical R9 value for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_SURVIVAL_FACTOR(i) <> "" Then
+                        Dim TECH_SURVIVAL_FACTOR As XElement = <TECH_SURVIVAL_FACTOR/>
+                        TECH_SURVIVAL_FACTOR.Value = _TECH_SURVIVAL_FACTOR(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_SURVIVAL_FACTOR)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical survival factor for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_LUMEN_MAINTENANCE_FACTOR(i) <> "" Then
+                        Dim TECH_LUMEN_MAINTENANCE_FACTOR As XElement = <TECH_LUMEN_MAINTENANCE_FACTOR/>
+                        TECH_LUMEN_MAINTENANCE_FACTOR.Value = _TECH_LUMEN_MAINTENANCE_FACTOR(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_LUMEN_MAINTENANCE_FACTOR)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical lumen maintenance
+                        factor for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_INDICATIVE_LIFETIME(i) <> "" Then
+                        Dim TECH_INDICATIVE_LIFETIME As XElement = <TECH_INDICATIVE_LIFETIME/>
+                        TECH_INDICATIVE_LIFETIME.Value = _TECH_INDICATIVE_LIFETIME(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_INDICATIVE_LIFETIME)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical indicative lifetime for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+
+                    If _MAINS(i) = "MLS" Then
+
+                        If _TECH_DISPLACEMENT_FACTOR(i) <> "" Then
+                            Dim TECH_DISPLACEMENT_FACTOR As XElement = <TECH_DISPLACEMENT_FACTOR/>
+                            TECH_DISPLACEMENT_FACTOR.Value = _TECH_DISPLACEMENT_FACTOR(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_DISPLACEMENT_FACTOR)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical displacement factor for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                        If _TECH_COLOUR_CONSISTENCY(i) <> "" Then
+                            Dim TECH_COLOUR_CONSISTENCY As XElement = <TECH_COLOUR_CONSISTENCY/>
+                            TECH_COLOUR_CONSISTENCY.Value = _TECH_COLOUR_CONSISTENCY(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_COLOUR_CONSISTENCY)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical colour consistency for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                        If _TECH_FLICKER_METRIC(i) <> "" Then
+                            Dim TECH_FLICKER_METRIC As XElement = <TECH_FLICKER_METRIC/>
+                            TECH_FLICKER_METRIC.Value = _TECH_FLICKER_METRIC(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_FLICKER_METRIC)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical flicker metric for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                        If _TECH_STROBOSCOPIC_EFFECT_METRIC(i) <> "" Then
+                            Dim TECH_STROBOSCOPIC_EFFECT_METRIC As XElement = <TECH_STROBOSCOPIC_EFFECT_METRIC/>
+                            TECH_STROBOSCOPIC_EFFECT_METRIC.Value = _TECH_STROBOSCOPIC_EFFECT_METRIC(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_STROBOSCOPIC_EFFECT_METRIC)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical stroboscopic effect metric for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                    End If
+                End If
+
+                If _HIGH_LUMINANCE_LIGHT_SOURCE(i) = "True" Then
+
+                    If _TECH_LUMINANCE_HLLS(i) <> "" Then
+                        Dim TECH_LUMINANCE_HLLS As XElement = <TECH_LUMINANCE_HLLS/>
+                        TECH_LUMINANCE_HLLS.Value = _TECH_LUMINANCE_HLLS(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_LUMINANCE_HLLS)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical luminance HLLS for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+                If _COLOUR_TUNEABLE_LIGHT_SOURCE(i) = "true" Then
+                    If _TECH_EXCITATION_PURITY_CTLS_BLUE(i) <> "" Then
+                        Dim TECH_EXCITATION_PURITY_CTLS_BLUE As XElement = <TECH_EXCITATION_PURITY_CTLS_BLUE/>
+                        TECH_EXCITATION_PURITY_CTLS_BLUE.Value = _TECH_EXCITATION_PURITY_CTLS_BLUE(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_EXCITATION_PURITY_CTLS_BLUE)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical excitation purity CTLS blue for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_EXCITATION_PURITY_CTLS_GREEN(i) <> "" Then
+                        Dim TECH_EXCITATION_PURITY_CTLS_GREEN As XElement = <TECH_EXCITATION_PURITY_CTLS_GREEN/>
+                        TECH_EXCITATION_PURITY_CTLS_GREEN.Value = _TECH_EXCITATION_PURITY_CTLS_GREEN(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_EXCITATION_PURITY_CTLS_GREEN)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical excitation purity CTLS green for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_EXCITATION_PURITY_CTLS_RED(i) <> "" Then
+                        Dim TECH_EXCITATION_PURITY_CTLS_RED As XElement = <TECH_EXCITATION_PURITY_CTLS_RED/>
+                        TECH_EXCITATION_PURITY_CTLS_RED.Value = _TECH_EXCITATION_PURITY_CTLS_RED(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_EXCITATION_PURITY_CTLS_RED)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical excitation purity CTLS red for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+                PRODUCT_GROUP_DETAIL.Add(TECHNICAL_PARAMETERS)
 
                 MODEL_VERSION.Add(PRODUCT_GROUP_DETAIL)
 
@@ -1559,12 +1944,12 @@ Public Class Form1
                 MODEL_VERSION.Add(PRODUCT_GROUP)
 
                 '---Energy Label 
-                If _CONSIDER_GENERATED_LABEL_AS_PROVIDED(i) <> "" Then
+                If _USE_SUPPLIER_UPLOADED_LABEL(i) <> "" Then
                     Dim ENERGY_LABEL As XElement = <ENERGY_LABEL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns5="http://eprel.ener.ec.europa.eu/commonTypes/EnergyLabelTypes/v2" xsi:type="ns5:GeneratedEnergyLabel"/>
-                    Dim CONSIDER_GENERATED_LABEL_AS_PROVIDED As XElement = <CONSIDER_GENERATED_LABEL_AS_PROVIDED/>
+                    Dim USE_SUPPLIER_UPLOADED_LABEL As XElement = <USE_SUPPLIER_UPLOADED_LABEL/>
 
-                    CONSIDER_GENERATED_LABEL_AS_PROVIDED.Value = _CONSIDER_GENERATED_LABEL_AS_PROVIDED(i)
-                    ENERGY_LABEL.Add(CONSIDER_GENERATED_LABEL_AS_PROVIDED)
+                    USE_SUPPLIER_UPLOADED_LABEL.Value = _USE_SUPPLIER_UPLOADED_LABEL(i)
+                    ENERGY_LABEL.Add(USE_SUPPLIER_UPLOADED_LABEL)
                     MODEL_VERSION.Add(ENERGY_LABEL)
                 Else
                     Form2.LB_Log.Items.Add("Energy Label for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
@@ -2197,6 +2582,250 @@ Public Class Form1
 
 
                 End If
+
+                '---Technical documentation section
+                Dim TECHNICAL_PARAMETERS As XElement = <TECHNICAL_PARAMETERS/>
+
+                If _TECH_LUMINOUS_FLUX(i) <> "" Then
+                    Dim TECH_LUMINOUS_FLUX As XElement = <TECH_LUMINOUS_FLUX/>
+                    TECH_LUMINOUS_FLUX.Value = _TECH_LUMINOUS_FLUX(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_LUMINOUS_FLUX)
+                Else
+                    Form2.LB_Log.Items.Add("Technical luminous flux for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _TECH_COLOUR_RENDERING_INDEX(i) <> "" Then
+                    Dim TECH_COLOUR_RENDERING_INDEX As XElement = <TECH_COLOUR_RENDERING_INDEX/>
+                    TECH_COLOUR_RENDERING_INDEX.Value = _TECH_COLOUR_RENDERING_INDEX(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_COLOUR_RENDERING_INDEX)
+                Else
+                    Form2.LB_Log.Items.Add("Technical colour rendering index for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _TECH_POWER_ON_MODE(i) <> "" Then
+                    Dim TECH_POWER_ON_MODE As XElement = <TECH_POWER_ON_MODE/>
+                    TECH_POWER_ON_MODE.Value = _TECH_POWER_ON_MODE(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_POWER_ON_MODE)
+                Else
+                    Form2.LB_Log.Items.Add("Technical power on mode for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _DIRECTIONAL(i) = "DLS" Then
+
+                    If _TECH_BEAM_ANGLE(i) <> "" Then
+                        Dim TECH_BEAM_ANGLE As XElement = <TECH_BEAM_ANGLE/>
+                        TECH_BEAM_ANGLE.Value = _TECH_BEAM_ANGLE(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_BEAM_ANGLE)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical beam angle for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_PEAK_LUMINOUS_INTENSITY(i) <> "" Then
+                        Dim TECH_PEAK_LUMINOUS_INTENSITY As XElement = <TECH_PEAK_LUMINOUS_INTENSITY/>
+                        TECH_PEAK_LUMINOUS_INTENSITY.Value = _TECH_PEAK_LUMINOUS_INTENSITY(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_PEAK_LUMINOUS_INTENSITY)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical peak luminous intensity for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+                If _TECH_CORRELATED_COLOUR_TEMP(i) <> "" Then
+                    Dim TECH_CORRELATED_COLOUR_TEMP As XElement = <TECH_CORRELATED_COLOUR_TEMP/>
+                    TECH_CORRELATED_COLOUR_TEMP.Value = _TECH_CORRELATED_COLOUR_TEMP(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_CORRELATED_COLOUR_TEMP)
+                Else
+                    Form2.LB_Log.Items.Add("Technical correlated colour temperature for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _TECH_POWER_STANDBY(i) <> "" Then
+                    Dim TECH_POWER_STANDBY As XElement = <TECH_POWER_STANDBY/>
+                    TECH_POWER_STANDBY.Value = _TECH_POWER_STANDBY(i)
+                    TECHNICAL_PARAMETERS.Add(TECH_POWER_STANDBY)
+                Else
+                    Form2.LB_Log.Items.Add("Technical power standby for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                    'Throw New ArgumentException("Exception Occured")
+                    errorstate = True
+                    Continue For
+                End If
+
+                If _CONNECTED_LIGHT_SOURCE(i) = "CLS" Then
+                    If _TECH_POWER_STANDBY_NETWORKED(i) <> "" Then
+                        Dim TECH_POWER_STANDBY_NETWORKED As XElement = <TECH_POWER_STANDBY_NETWORKED/>
+                        TECH_POWER_STANDBY_NETWORKED.Value = _TECH_POWER_STANDBY_NETWORKED(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_POWER_STANDBY_NETWORKED)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical power standby networked for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+
+                If _LIGHTING_TECHNOLOGY(i) = "LED" Or _LIGHTING_TECHNOLOGY(i) = "OLED" Then
+                    If _TECH_R9_COLOUR_RENDERING_INDEX(i) <> "" Then
+                        Dim TECH_R9_COLOUR_RENDERING_INDEX As XElement = <TECH_R9_COLOUR_RENDERING_INDEX/>
+                        TECH_R9_COLOUR_RENDERING_INDEX.Value = _TECH_R9_COLOUR_RENDERING_INDEX(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_R9_COLOUR_RENDERING_INDEX)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical R9 value for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_SURVIVAL_FACTOR(i) <> "" Then
+                        Dim TECH_SURVIVAL_FACTOR As XElement = <TECH_SURVIVAL_FACTOR/>
+                        TECH_SURVIVAL_FACTOR.Value = _TECH_SURVIVAL_FACTOR(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_SURVIVAL_FACTOR)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical survival factor for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_LUMEN_MAINTENANCE_FACTOR(i) <> "" Then
+                        Dim TECH_LUMEN_MAINTENANCE_FACTOR As XElement = <TECH_LUMEN_MAINTENANCE_FACTOR/>
+                        TECH_LUMEN_MAINTENANCE_FACTOR.Value = _TECH_LUMEN_MAINTENANCE_FACTOR(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_LUMEN_MAINTENANCE_FACTOR)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical lumen maintenance
+                        factor for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_INDICATIVE_LIFETIME(i) <> "" Then
+                        Dim TECH_INDICATIVE_LIFETIME As XElement = <TECH_INDICATIVE_LIFETIME/>
+                        TECH_INDICATIVE_LIFETIME.Value = _TECH_INDICATIVE_LIFETIME(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_INDICATIVE_LIFETIME)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical indicative lifetime for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+
+                    If _MAINS(i) = "MLS" Then
+
+                        If _TECH_DISPLACEMENT_FACTOR(i) <> "" Then
+                            Dim TECH_DISPLACEMENT_FACTOR As XElement = <TECH_DISPLACEMENT_FACTOR/>
+                            TECH_DISPLACEMENT_FACTOR.Value = _TECH_DISPLACEMENT_FACTOR(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_DISPLACEMENT_FACTOR)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical displacement factor for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                        If _TECH_COLOUR_CONSISTENCY(i) <> "" Then
+                            Dim TECH_COLOUR_CONSISTENCY As XElement = <TECH_COLOUR_CONSISTENCY/>
+                            TECH_COLOUR_CONSISTENCY.Value = _TECH_COLOUR_CONSISTENCY(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_COLOUR_CONSISTENCY)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical colour consistency for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                        If _TECH_FLICKER_METRIC(i) <> "" Then
+                            Dim TECH_FLICKER_METRIC As XElement = <TECH_FLICKER_METRIC/>
+                            TECH_FLICKER_METRIC.Value = _TECH_FLICKER_METRIC(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_FLICKER_METRIC)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical flicker metric for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                        If _TECH_STROBOSCOPIC_EFFECT_METRIC(i) <> "" Then
+                            Dim TECH_STROBOSCOPIC_EFFECT_METRIC As XElement = <TECH_STROBOSCOPIC_EFFECT_METRIC/>
+                            TECH_STROBOSCOPIC_EFFECT_METRIC.Value = _TECH_STROBOSCOPIC_EFFECT_METRIC(i)
+                            TECHNICAL_PARAMETERS.Add(TECH_STROBOSCOPIC_EFFECT_METRIC)
+                        Else
+                            Form2.LB_Log.Items.Add("Technical stroboscopic effect metric for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                            'Throw New ArgumentException("Exception Occured")
+                            errorstate = True
+                            Continue For
+                        End If
+
+                    End If
+                End If
+
+                If _HIGH_LUMINANCE_LIGHT_SOURCE(i) = "True" Then
+
+                    If _TECH_LUMINANCE_HLLS(i) <> "" Then
+                        Dim TECH_LUMINANCE_HLLS As XElement = <TECH_LUMINANCE_HLLS/>
+                        TECH_LUMINANCE_HLLS.Value = _TECH_LUMINANCE_HLLS(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_LUMINANCE_HLLS)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical luminance HLLS for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+                If _COLOUR_TUNEABLE_LIGHT_SOURCE(i) = "true" Then
+                    If _TECH_EXCITATION_PURITY_CTLS_BLUE(i) <> "" Then
+                        Dim TECH_EXCITATION_PURITY_CTLS_BLUE As XElement = <TECH_EXCITATION_PURITY_CTLS_BLUE/>
+                        TECH_EXCITATION_PURITY_CTLS_BLUE.Value = _TECH_EXCITATION_PURITY_CTLS_BLUE(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_EXCITATION_PURITY_CTLS_BLUE)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical excitation purity CTLS blue for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_EXCITATION_PURITY_CTLS_GREEN(i) <> "" Then
+                        Dim TECH_EXCITATION_PURITY_CTLS_GREEN As XElement = <TECH_EXCITATION_PURITY_CTLS_GREEN/>
+                        TECH_EXCITATION_PURITY_CTLS_GREEN.Value = _TECH_EXCITATION_PURITY_CTLS_GREEN(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_EXCITATION_PURITY_CTLS_GREEN)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical excitation purity CTLS green for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+
+                    If _TECH_EXCITATION_PURITY_CTLS_RED(i) <> "" Then
+                        Dim TECH_EXCITATION_PURITY_CTLS_RED As XElement = <TECH_EXCITATION_PURITY_CTLS_RED/>
+                        TECH_EXCITATION_PURITY_CTLS_RED.Value = _TECH_EXCITATION_PURITY_CTLS_RED(i)
+                        TECHNICAL_PARAMETERS.Add(TECH_EXCITATION_PURITY_CTLS_RED)
+                    Else
+                        Form2.LB_Log.Items.Add("Technical excitation purity CTLS red for Modelidentifier " & _MODEL_IDENTIFIER(i) & " is missing!")
+                        'Throw New ArgumentException("Exception Occured")
+                        errorstate = True
+                        Continue For
+                    End If
+                End If
+
+                PRODUCT_GROUP_DETAIL.Add(TECHNICAL_PARAMETERS)
 
                 MODEL_VERSION.Add(PRODUCT_GROUP_DETAIL)
 

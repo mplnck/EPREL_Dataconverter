@@ -272,6 +272,123 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CB_RegistrantNature.Name" xml:space="preserve">
+    <value>CB_RegistrantNature</value>
+  </data>
+  <data name="&gt;&gt;CB_RegistrantNature.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CB_RegistrantNature.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CB_RegistrantNature.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Txt_ContactRef.Name" xml:space="preserve">
+    <value>Txt_ContactRef</value>
+  </data>
+  <data name="&gt;&gt;Txt_ContactRef.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Txt_ContactRef.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Txt_ContactRef.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;CB_ReasonChange.Name" xml:space="preserve">
+    <value>CB_ReasonChange</value>
+  </data>
+  <data name="&gt;&gt;CB_ReasonChange.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CB_ReasonChange.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CB_ReasonChange.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;CheckB_Log.Name" xml:space="preserve">
+    <value>CheckB_Log</value>
+  </data>
+  <data name="&gt;&gt;CheckB_Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckB_Log.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CheckB_Log.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;CB_OperationType.Name" xml:space="preserve">
+    <value>CB_OperationType</value>
+  </data>
+  <data name="&gt;&gt;CB_OperationType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CB_OperationType.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CB_OperationType.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 12</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 288</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -512,27 +629,6 @@
   <data name="&gt;&gt;CB_OperationType.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 12</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 288</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="LinkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -540,13 +636,13 @@
     <value>115, 409</value>
   </data>
   <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 13</value>
+    <value>131, 13</value>
   </data>
   <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>©Mario Planeck, 21.06.2022</value>
+    <value>©Mario Planeck, 03/2025</value>
   </data>
   <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
     <value>LinkLabel1</value>
@@ -620,70 +716,12 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>374, 431</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAIBgAAAEAIACIDAAAFgAAACgAAAAgAAAAMAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAB5AAAA6AAAAOAAAADgAAAA4AAAAOAAAADdAAAAGwAAAAD///8A////AP///wD///8A////AP//
-        /wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAADAwMDAAAA0AAAAOEAAADgAAAA4AAA
-        AOAAAADnAAAAhwEBARcAAADoAAAA/wAAAP8AAAD/AAAA/wAAAP8AAACkFBQUAAAAAAD///8A////AP//
-        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AAAAAAAAAAIQAAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAPEAAAAfAAAAAAAAAHUAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAPQAAAA2AAAAAP//
-        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAAAAAAmAAAA4wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAAgg8PDwEAAAAAAAAAEwAAANoAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AK4GBgYCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjY2AAAA
-        AIoAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAOEAAAAeAAAAAE1NTQAAAAAAAAAAWQAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAEwCAgIEAQEBCAEBAQgBAQEIAQEBCAEBAQgBAQEIAQEBCAEBAQgBAQEIAQEBCAEB
-        AQYAAAAxAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAcQAAAABTU1MA////AAAAAAAAAAAAAAAAvAAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA9AAAAOUAAADmAAAA5gAAAOYAAADmAAAA5gAAAOYAAADmAAAA5gAA
-        AOYAAADmAAAA5QAAAO8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANYAAAAAAAAAAP///wD///8A////AAAA
-        AAAAAAAbAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAALgAAAAD///8A////AP//
-        /wD///8ANjY2AAoKCgEAAACJAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAJ0ICAgCJycnAP//
-        /wD///8A////AP///wD///8AAAAAAAAAACMAAADjAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADqAAAAMwAA
-        AAD///8A////AP///wD///8A////AP///wCTk5MAAAAAAAAAAIMAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        APUAAADoAAAA5wAAAOcAAADnAAAA5wAAAOcAAADnAAAA6AAAAPQAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AJ4AAAAAAAAAAP///wD///8A////AP///wD///8A////AP///wAAAAAAAAAAAAAAAN4AAAD/AAAA/wAA
-        AP8AAAD/AAAAzQAAABIAAAAPAAAADgAAAA4AAAAOAAAADgAAAA8AAAAQAAAAvgAAAP8AAAD/AAAA/wAA
-        AP8AAADyAQEBDwAAAAD///8A////AP///wD///8A////AP///wD///8A////AGJiYgAAAAAAAAAANAAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAAZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEoAAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAFYAAAAAUlJSAP///wD///8A////AP///wD///8A////AP///wD///8A////ADIy
-        MgAWFhYAAAAApAAAAP8AAAD/AAAA/wAAAP8AAAD/AQEBDQAAAADi4uIA////AAAAAAAAAAAAAAAA7gAA
-        AP8AAAD/AAAA/wAAAP8AAADEAAAAACIiIgD///8A////AP///wD///8A////AP///wD///8A////AP//
-        /wD///8A/v7+AAAAAAAAAAAwAAAA7gAAAP8AAAD/AAAA/wAAAP8AAACrAAAAAAAAAAD///8AAAAAAAAA
-        AIwAAAD/AAAA/wAAAP8AAAD/AAAA9wAAAERFRUUA/v7+AP///wD///8A////AP///wD///8A////AP//
-        /wD///8A////AP///wD///8AAAAAAAAAAAAAAACbAAAA/wAAAP8AAAD/AAAA/wAAAPMAAABEAAAAAAAA
-        AAAAAAArAAAA6AAAAP8AAAD/AAAA/wAAAP8AAAC2CwsLAQAAAAD///8A////AP///wD///8A////AP//
-        /wD///8A////AP///wD///8A////AP///wD///8AAAAAAAAAABQAAAD0AAAA/wAAAP8AAAD/AAAA/wAA
-        ALMBAQEJBAQEAwAAAJIAAAD/AAAA/wAAAP8AAAD/AAAA+QAAADMAAAAA////AP///wD///8A////AP//
-        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wAsLCwAAAAAAAAAAGMAAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAEwAAAAlAAAA+AAAAP8AAAD/AAAA/wAAAP8AAACTAAAAACsrKwD///8A////AP//
-        /wD///8A////AP///wD///8A////AJKSkgAjIyMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBwcAAAA
-        AMMAAAD/AAAA/wAAAP8AAAD/AAAA6AAAALkAAAD/AAAA/wAAAP8AAAD/AAAA6QAAAAUAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAANjY2AP///wD///8AAAAAAAAAAAAAAACOAAAAjgAAAI0AAACNAAAAkAAA
-        AFoNDQ0BAAAAOQAAAP0AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABYAAAAAAAA
-        ADgAAACTAAAAjQAAAI0AAACNAAAAkQAAABgAAAAA////AP///wAAAAAAAAAAAAAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAAqQcHBwICAgIFAAAAqgAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAxgAA
-        AA4XFxcAAAAAaAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAALAAAAAD///8A////AAAAAAAAAAAAAAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAACkBwcHAgAAAAAAAAAuAAAA+gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        APsAAABWAAAAABkZGQAAAABlAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAArAAAAAP///wD///8AAAAAAAAA
-        AAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAKQHBwcCMzMzAAAAAAAAAACXAAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAAyAAAAAAAAAAAGRkZAAAAAGUAAAD/AAAA/wAAAP8AAAD/AAAA/wAAACsAAAAA////AP//
-        /wAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAApAcHBwL///8AAAAAAAAAAAQAAADmAAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAAgAAAAAHt7ewAZGRkAAAAAZQAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAKwAA
-        AAD///8A////AAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAACkBwcHAv///wBdXV0AAAAAAAAA
-        AEgAAAD/AAAA/wAAAP8AAAD/AAAAdgAAAABNTU0A////ABkZGQAAAABlAAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAArAAAAAP///wAA//8AAP//AIB//gCAP/4BwAAAA+AAAAfgAAAH4AAAB/AAAA/4AAAf/AAAH/wH
-        4D/+A+B//gPAf/8BgH//AAD//4AB///AAf/gAAID4AACA+AgBgPgMA4D4DAOA+A4HgM=
-</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>EPREL Dataconverter V1.0.1</value>
+    <value>EPREL Dataconverter V1.1.16</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>

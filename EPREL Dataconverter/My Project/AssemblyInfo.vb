@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("EPREL Dataconverter")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("nimbus Group GmbH")>
-<Assembly: AssemblyProduct("EPREl Dataconverter")>
-<Assembly: AssemblyCopyright("Copyright ©  2022")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("EPREL Dataconverter")>
+<Assembly: AssemblyCopyright("Copyright ©  2025")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
