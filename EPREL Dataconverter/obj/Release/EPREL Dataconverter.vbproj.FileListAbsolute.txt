@@ -151,3 +151,7 @@ C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\
 C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Release\EPREL Dataconverter.exe
 C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Release\EPREL Dataconverter.xml
 C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\obj\Release\EPREL Dataconverter.pdb
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Release\Form1.resx
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Release\Form1.de.resx
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Release\Form1.vb
+C:\Users\mario.planeck\Source\Repos\EPREL_Dataconverter\EPREl Dataconverter\bin\Release\Form1.Designer.vb
