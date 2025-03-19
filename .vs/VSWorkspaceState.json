@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\EPREL Dataconverter",
+    "\\EPREL Dataconverter\\Resources"
   ],
-  "SelectedNode": "\\EPREL Dataconverter.sln",
+  "SelectedNode": "\\EPREL Dataconverter\\Form1.vb",
   "PreviewInSolutionExplorer": false
 }
