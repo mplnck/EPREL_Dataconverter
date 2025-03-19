@@ -169,9 +169,6 @@
   <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>©Mario Planeck, 16.09.2021</value>
-  </data>
   <data name="Button3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>

@@ -22,5 +22,15 @@ EPREL Dataconverter
   Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
 </summary>
 </member>
+<member name="P:EPREL_Dataconverter.My.Resources.Resources.favicon__2_">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+</summary>
+</member>
+<member name="P:EPREL_Dataconverter.My.Resources.Resources.Template_EPREL_ECO_V0_8">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+</summary>
+</member>
 </members>
 </doc>

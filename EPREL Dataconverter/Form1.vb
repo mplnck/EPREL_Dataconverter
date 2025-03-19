@@ -3055,10 +3055,15 @@ Done:
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        Dim dir As String = System.IO.Path.GetDirectoryName(Application.ExecutablePath)
-        dir += "/EPREL Dataconverter-Manual.pdf"
+        'Dim dir As String = System.IO.Path.GetDirectoryName(Application.ExecutablePath)
+        'Dir += "/EPREL Dataconverter-Manual.pdf"
+        System.Diagnostics.Process.Start("https://github.com/mplnck/EPREL_Dataconverter/raw/refs/heads/master/EPREL%20Dataconverter/Resources/EPREL%20Dataconverter-Manual.pdf")
 
-        System.Diagnostics.Process.Start(dir)
+    End Sub
+
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        System.Diagnostics.Process.Start("https://github.com/mplnck/EPREL_Dataconverter/raw/refs/heads/master/EPREL%20Dataconverter/Resources/Template_EPREL_ECO-V0.8.xlsx")
+
     End Sub
 
 

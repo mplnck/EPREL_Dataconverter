@@ -41,6 +41,7 @@ Partial Class Form1
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.BT_Tools = New System.Windows.Forms.Button()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -158,10 +159,17 @@ Partial Class Form1
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.TabStop = True
         '
+        'LinkLabel3
+        '
+        resources.ApplyResources(Me.LinkLabel3, "LinkLabel3")
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.TabStop = True
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.BT_Tools)
         Me.Controls.Add(Me.LinkLabel1)
@@ -203,4 +211,5 @@ Partial Class Form1
     Friend WithEvents CB_RegistrantNature As ComboBox
     Friend WithEvents BT_Tools As Button
     Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents LinkLabel3 As LinkLabel
 End Class
